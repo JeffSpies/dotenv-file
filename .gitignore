@@ -1,2 +1,16 @@
-node_modules
+.DS_Store
+
+*-debug.log
+*-error.log
+
+*.js
+*.js.map
+
+node_modules/
+
+/dist
 /lib
+/package-lock.json
+/tmp
+/.nyc_output
+/coverage

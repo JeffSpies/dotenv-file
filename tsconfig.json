@@ -1,18 +1,18 @@
 {
   "compilerOptions": {
     "sourceMap": true,
-    "target": "es2019",
+    "target": "es5",
     "module": "commonjs",
-    "moduleResolution": "node",
-    "lib": ["es2015", "dom"],
-    "rootDir": "./src",
-    "outDir": "lib",
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "lib": ["es2015"],
+    "esModuleInterop": true,
+    "experimentalDecorators": true
   },
+  "include": [
+    "src/**/*.ts"
+  ],
   "exclude": [
+    "coverage",
     "node_modules",
-    "lib"
+    "!node_modules/@types"
   ]
 }

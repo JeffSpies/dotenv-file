@@ -7,6 +7,9 @@ This package is intended to be a drop-in replacement for `dotenv`, but adds the 
 - Schema
 - CLI
 
+Future features may include
+- Type conversion based upon schema.
+
 ## Install
 
 ```js

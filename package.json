@@ -1,12 +1,23 @@
 {
   "name": "dotenv-file",
+  "author": "@jeffspies",
   "version": "0.0.1",
-  "main": "lib/main.js",
-  "files": ["lib/**/*js"],
+  "license": "MIT",
+  "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/jeffspies/dotenv-plus.git"
+    "url": "git://github.com/jeffspies/dotenv-file.git"
   },
+  "bugs": {
+    "url": "https://github.com/jeffspies/dotenv-file/issues"
+  },
+  "bin": {
+    "dotenv-file": "./bin/run"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
   "keywords": [
     "dotenv",
     "dotenvplus",
@@ -18,17 +29,45 @@
     "config",
     "settings"
   ],
-  "license": "MIT",
   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@oclif/test": "^1.2.8",
+    "@testdeck/mocha": "^0.1.2",
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^9.0.0",
     "@types/node": "^16.9.1",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1",
+    "nyc": "^15.1.0",
+    "rimraf": "^3.0.2",
+    "source-map-support": "^0.5.20",
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
   },
   "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/errors": "^1.3.5",
+    "@oclif/plugin-not-found": "^1.2.4",
+    "@oclif/plugin-warn-if-update-available": "^1.7.0",
     "@types/dotenv": "^8.2.0",
-    "dotenv": "^10.0.0"
+    "dotenv": "^10.0.0",
+    "envfile": "^6.17.0"
+  },
+  "oclif": {
+    "commands": "./src/cli/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-warn-if-update-available",
+      "@oclif/plugin-not-found"
+    ],
+    "bin": "dotenv-file"
   },
   "scripts": {
-    "build": "tsc"
+    "clean": "rimraf .nyc_output lib coverage src/**/*.js src/**/*.map test/**/*.js test/**/*.map",
+    "watch": "testdeck-watch",
+    "build": "tsc",
+    "pretest": "npm run clean",
+    "test": "nyc mocha --config ./test/.mocharc.yml"
   }
 }
