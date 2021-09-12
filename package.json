@@ -1,0 +1,34 @@
+{
+  "name": "dotenv-file",
+  "version": "0.0.1",
+  "main": "lib/main.js",
+  "files": ["lib/**/*js"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jeffspies/dotenv-plus.git"
+  },
+  "keywords": [
+    "dotenv",
+    "dotenvplus",
+    "dotenv-plus",
+    "env",
+    ".env",
+    "environment",
+    "variables",
+    "config",
+    "settings"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^16.9.1",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "dotenv": "^10.0.0"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}
