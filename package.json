@@ -51,8 +51,11 @@
     "@oclif/plugin-not-found": "^1.2.4",
     "@oclif/plugin-warn-if-update-available": "^1.7.0",
     "@types/dotenv": "^8.2.0",
+    "compare-versions": "^3.6.0",
+    "date-fns": "^2.24.0",
     "dotenv": "^10.0.0",
-    "envfile": "^6.17.0"
+    "envfile": "^6.17.0",
+    "lodash": "^4.17.21"
   },
   "oclif": {
     "commands": "./src/cli/commands",

@@ -4,6 +4,9 @@ interface IData {
 
 // https://gist.github.com/tmarshall/31e640e1fa80c597cc5bf78566b1274c
 export function template (template: string, data: IData = {}): string {
+  if (!('_' in data)) {
+    data['_'] = require('lodash')
+  }
   const handler = new Function('vars', `
     return (
       ( ${Object.keys(data).join(', ')} ) => \`${template}\`

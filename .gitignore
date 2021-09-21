@@ -6,9 +6,8 @@
 *.js
 *.js.map
 
-node_modules/
+node_modules
 
-/dist
 /lib
 /package-lock.json
 /tmp
