@@ -1,15 +1,25 @@
 .DS_Store
-
-*-debug.log
+.vscode/
+node_modules/
+*-debug.log*
 *-error.log
+scratch
 
-*.js
-*.js.map
-
-node_modules
+build
+lib
 
 /lib
 /package-lock.json
 /tmp
 /.nyc_output
 /coverage
+
+# Ignore files and folders recursively
+/example/build/**
+# Then exclude folders
+!/example/build/**/
+# Then exclude .gitkeeps
+!/**/.gitkeep
+
+.env*
+!example/.env

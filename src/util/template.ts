@@ -1,3 +1,5 @@
+import _ from "lodash"
+
 interface IData {
   [key: string]: string
 }
@@ -7,10 +9,6 @@ export function template (template: string, data: IData = {}): string {
   if (!('_' in data)) {
     data['_'] = require('lodash')
   }
-  const handler = new Function('vars', `
-    return (
-      ( ${Object.keys(data).join(', ')} ) => \`${template}\`
-    )(...Object.values(vars));
-  `)
-  return handler(data)
+  const compiled = _.template(template)
+  return compiled(data)
 }
