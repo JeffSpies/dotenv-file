@@ -1,19 +1,17 @@
-# dotenv-file
+# dotenvious
 
-This package is intended to be a drop-in replacement for `dotenv`, but adds the following features:
+> Make your .env files so powerful they'll make other .env files jealous
 
-- Variable expansion with the `.env` file (e.g., `MESSAGE=Hello, ${NAME}`)
-- Loading default variables from defaults file (e.g., `.env.defaults`)
-- Schema
-- CLI
-
-Future features may include
-- Type conversion based upon schema.
+- Variable expansion
+- Schema validation
+- Variable types
+- Makes adding/removing variables to your .env files easier for teams
+- Docker tool for repeatable build processes
 
 ## Install
 
 ```js
-npm install dotenv-file --save-dev
+npm install dotenvious -g
 ```
 
 or

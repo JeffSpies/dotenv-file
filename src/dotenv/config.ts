@@ -2,7 +2,6 @@ import path from 'path'
 import fs from 'fs'
 import dotenv from 'dotenv'
 import { resolveHome } from '../util/resolve-home'
-import { log } from '../util/log'
 import { parse, DotenvParseOutput } from './parse'
 
 type DotenvConfigOptions = {
@@ -58,7 +57,6 @@ export function config (options?: DotenvConfigOptions): DotenvConfigOutput {
       if (!Object.prototype.hasOwnProperty.call(process.env, key)) {
         process.env[key] = parsed[key]
       } else if (debug) {
-        log(`"${key}" is already defined in \`process.env\` and will not be overwritten`)
       }
     })
 

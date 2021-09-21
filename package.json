@@ -1,7 +1,7 @@
 {
-  "name": "dotenv-file",
+  "name": "dotenvious",
   "author": "@jeffspies",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "license": "MIT",
   "main": "main.js",
   "repository": {
@@ -16,7 +16,7 @@
   },
   "files": [
     "/bin",
-    "/src/**/*.js"
+    "/lib/**/*.js"
   ],
   "keywords": [
     "dotenv",
